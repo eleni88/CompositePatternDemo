@@ -1,2 +1,2 @@
 # CompositePatternDemo
- using a composite demo with a LinkedList
+ using a composite pattern with a LinkedList
