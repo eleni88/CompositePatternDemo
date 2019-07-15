@@ -30,9 +30,17 @@ public class CompositePatternDemo {
         headSales.add(salesExecutive1);
         headSales.add(salesExecutive2);
         headMarketing.add(clerk1);
-        headMarketing.add(clerk2);
+        headMarketing.add(clerk2);    
         
         System.out.println(CEO);
+        for(int i = 0; i < CEO.getSubordinates().size(); i++) {
+            System.out.println(CEO.getSubordinates().get(i));
+            for(int j = 0; j < CEO.getSubordinates().get(i).getSubordinates().size(); j++) {
+                System.out.println(CEO.getSubordinates().get(i).getSubordinates().get(j));
+            }
+        }
+        
+        System.out.println("....................................................");
         Iterator it = CEO.getSubordinates().iterator();
         while(it.hasNext()) {
             Employee e = (Employee) it.next();
@@ -44,7 +52,8 @@ public class CompositePatternDemo {
             System.out.println("----------");
             
         }
-        
+
+    
     }
 
 }
